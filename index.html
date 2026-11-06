@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ayham Algherbawi — CV</title>
+<meta name="description" content="Ayham Algherbawi — Computer Engineering graduate and junior software developer focused on frontend, UI and API-driven applications. Istanbul, Turkey.">
+<meta property="og:title" content="Ayham Algherbawi — Junior Frontend / Software Developer">
+<meta property="og:description" content="Computer Engineering graduate. UI-focused developer with REST API integration, agile and international team experience.">
+<meta property="og:type" content="profile">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f7f8fb; --surface:#ffffff; --text:#1b2030; --muted:#5b6478; --line:#e4e7ef;
+  --accent:#4f5bd5; --accent-soft:#eceefd; --chip:#f1f3f8;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0f1218; --surface:#171b24; --text:#e8ebf2; --muted:#9aa3b5; --line:#262c38;
+    --accent:#8b94ff; --accent-soft:#1f2440; --chip:#1e2330;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0f1218; --surface:#171b24; --text:#e8ebf2; --muted:#9aa3b5; --line:#262c38;
+  --accent:#8b94ff; --accent-soft:#1f2440; --chip:#1e2330;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+.wrap{max-width:880px;margin:0 auto;padding:0 16px}
+
+header.hero{padding:56px 0 32px}
+.top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+.eyebrow{display:inline-block;font-size:13px;font-weight:600;color:var(--accent);background:var(--accent-soft);padding:4px 10px;border-radius:999px;margin-bottom:16px}
+h1{font-size:clamp(32px,6vw,48px);line-height:1.1;letter-spacing:-.02em;font-weight:700}
+.role{font-size:clamp(17px,2.6vw,20px);color:var(--muted);margin-top:8px;font-weight:500}
+.summary{margin-top:20px;max-width:680px;font-size:17px}
+.contact{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:22px;font-size:15px;color:var(--muted)}
+.contact a{color:var(--text)}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:10px;font-weight:600;font-size:15px;border:1px solid var(--line);background:var(--surface);color:var(--text)}
+.btn:hover{text-decoration:none;border-color:var(--accent)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+:root[data-theme="dark"] .btn.primary{color:#0f1218}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .btn.primary{color:#0f1218}}
+.theme{background:var(--surface);border:1px solid var(--line);color:var(--text);width:40px;height:40px;border-radius:10px;cursor:pointer;font-size:18px;flex-shrink:0}
+
+section{padding:28px 0;border-top:1px solid var(--line)}
+h2{font-size:13px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);font-weight:600;margin-bottom:18px}
+
+.highlights{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px}
+.card h3{font-size:16px;font-weight:600;margin-bottom:6px}
+.card p{font-size:15px;color:var(--muted)}
+
+.skills{display:grid;gap:16px}
+.skill-row{display:grid;grid-template-columns:170px 1fr;gap:12px;align-items:start}
+.skill-row .label{font-weight:600;font-size:15px;padding-top:4px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{background:var(--chip);border:1px solid var(--line);border-radius:999px;padding:4px 12px;font-size:14px}
+.chip.key{background:var(--accent-soft);border-color:transparent;color:var(--accent);font-weight:600}
+
+.item{display:grid;grid-template-columns:150px 1fr;gap:16px;padding:6px 0 22px}
+.item:last-child{padding-bottom:0}
+.when{color:var(--muted);font-size:14px;padding-top:3px}
+.item h3{font-size:17px;font-weight:600;line-height:1.35}
+.item .org{color:var(--muted);font-size:15px;margin:2px 0 8px}
+ul.points{padding-left:18px}
+ul.points li{margin:4px 0;font-size:15.5px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.tag{font-size:12.5px;color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:2px 8px}
+
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
+.projects .card ul{padding-left:18px;margin-top:6px}
+.projects .card li{font-size:15px;color:var(--muted);margin:3px 0}
+
+.two{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.lang{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dashed var(--line);font-size:15.5px}
+.lang span:last-child{color:var(--muted)}
+.plain li{list-style:none;padding:6px 0;font-size:15.5px}
+.plain li small{display:block;color:var(--muted);font-size:14px}
+
+footer{padding:32px 0 48px;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+
+@media (max-width:640px){
+  header.hero{padding:32px 0 24px}
+  .item,.skill-row{grid-template-columns:1fr;gap:4px}
+  .two{grid-template-columns:1fr}
+}
+@media print{
+  .theme,.actions{display:none}
+  body{background:#fff;color:#000;font-size:13px}
+  section{padding:14px 0;break-inside:avoid}
+  header.hero{padding:0 0 14px}
+}
+</style>
+<script>
+try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}
+</script>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <div class="top">
+    <div>
+      <span class="eyebrow">Open to Junior Frontend roles</span>
+      <h1>Ayham Algherbawi</h1>
+      <p class="role">Junior Software Developer · Frontend &amp; UI · API Integration</p>
+    </div>
+    <button class="theme" id="theme" aria-label="Toggle dark mode">◐</button>
+  </div>
+  <p class="summary">
+    Computer Engineering graduate (Maltepe University, 2025) who enjoys building clean, responsive user interfaces on top of real APIs.
+    I built UI screens and REST API integrations for a VoIP monitoring product during an international internship at
+    FRAFOS GmbH (Berlin), working in an agile team. I learn fast, take ownership of what I ship, and communicate clearly —
+    English C2, Arabic native, Turkish B1.
+  </p>
+  <div class="contact">
+    <span>📍 Istanbul, Turkey</span>
+    <a href="mailto:ayhamagg@gmail.com">✉️ ayhamagg@gmail.com</a>
+    <a href="tel:+905343679975">📞 +90 534 367 9975</a>
+    <a href="https://www.linkedin.com/in/ayham-a-i-algherbawi-bb3a62261" target="_blank" rel="noopener">in LinkedIn</a>
+  </div>
+  <div class="actions">
+    <a class="btn primary" href="Ayham_Algherbawi_CV.pdf" download>⬇ Download PDF</a>
+    <a class="btn" href="mailto:ayhamagg@gmail.com">Email me</a>
+    <a class="btn" href="https://www.linkedin.com/in/ayham-a-i-algherbawi-bb3a62261" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+</header>
+
+<main>
+<section aria-labelledby="why">
+  <h2 id="why">What I bring</h2>
+  <div class="highlights">
+    <div class="card"><h3>UI built on real APIs</h3><p>Designed UI screens and wired them to REST APIs for real-time VoIP performance tracking at FRAFOS GmbH.</p></div>
+    <div class="card"><h3>Agile, international teamwork</h3><p>Shipped production-level features with a remote Berlin team — planning, debugging and backend integration.</p></div>
+    <div class="card"><h3>UI/UX mindset</h3><p>Passionate about clean, functional interfaces; built apps designed for smooth UX and responsive layouts.</p></div>
+    <div class="card"><h3>Drive &amp; accountability</h3><p>Teach programming and AI fundamentals to students; led a youth volunteer group for 3 years straight.</p></div>
+  </div>
+</section>
+
+<section aria-labelledby="skills">
+  <h2 id="skills">Technical skills</h2>
+  <div class="skills">
+    <div class="skill-row"><span class="label">Web &amp; UI</span>
+      <div class="chips"><span class="chip key">HTML5</span><span class="chip key">CSS3</span><span class="chip key">Responsive layouts</span><span class="chip key">UI/UX design</span><span class="chip">PHP</span></div></div>
+    <div class="skill-row"><span class="label">APIs &amp; testing</span>
+      <div class="chips"><span class="chip key">REST APIs</span><span class="chip key">API integration</span><span class="chip">Postman</span><span class="chip">Debugging</span></div></div>
+    <div class="skill-row"><span class="label">Languages</span>
+      <div class="chips"><span class="chip">Java</span><span class="chip">Python</span><span class="chip">C</span><span class="chip">Bash / Shell</span></div></div>
+    <div class="skill-row"><span class="label">Mobile</span>
+      <div class="chips"><span class="chip">Android (Java)</span><span class="chip">Android Studio</span></div></div>
+    <div class="skill-row"><span class="label">Tools &amp; CLI</span>
+      <div class="chips"><span class="chip key">Git</span><span class="chip">Docker</span><span class="chip">Command line</span><span class="chip">Arduino</span></div></div>
+    <div class="skill-row"><span class="label">Databases</span>
+      <div class="chips"><span class="chip">MySQL</span><span class="chip">SQLite</span></div></div>
+    <div class="skill-row"><span class="label">CS fundamentals</span>
+      <div class="chips"><span class="chip">Data structures</span><span class="chip">OOP</span><span class="chip">Agile workflow</span></div></div>
+  </div>
+</section>
+
+<section aria-labelledby="exp">
+  <h2 id="exp">Experience</h2>
+
+  <div class="item">
+    <div class="when">2024</div>
+    <div>
+      <h3>Software Development Intern — Mobile VoIP Monitoring</h3>
+      <p class="org">FRAFOS GmbH · Berlin, Germany (Remote)</p>
+      <ul class="points">
+        <li>Built UI screens and monitoring features for VoIP traffic, integrating REST APIs for real-time performance data.</li>
+        <li>Assisted with backend integration and debugging inside an international development team.</li>
+        <li>Worked in an agile workflow on production-level code, collaborating remotely in English.</li>
+      </ul>
+      <div class="tags"><span class="tag">Java</span><span class="tag">REST APIs</span><span class="tag">Android</span><span class="tag">Agile</span><span class="tag">Git</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="when">2025 – Present</div>
+    <div>
+      <h3>Robotics &amp; Programming Technician</h3>
+      <p class="org">Üçüncü Bin Yıl Academy &amp; Robotics · Istanbul, Turkey</p>
+      <ul class="points">
+        <li>Deliver training sessions in robotics, Python and AI fundamentals — explaining technical concepts clearly to students.</li>
+        <li>Troubleshoot hardware and configure software across lab equipment, owning issues end to end.</li>
+        <li>Design and run hands-on workshops on Arduino and programming concepts.</li>
+      </ul>
+      <div class="tags"><span class="tag">Python</span><span class="tag">Arduino</span><span class="tag">Teaching</span><span class="tag">Troubleshooting</span></div>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="proj">
+  <h2 id="proj">Projects</h2>
+  <div class="projects">
+    <div class="card">
+      <h3>VoIP Monitoring Dashboard</h3>
+      <ul>
+        <li>UI screens + API connections for real-time VoIP performance tracking.</li>
+        <li>Built with the FRAFOS GmbH team (remote).</li>
+      </ul>
+      <div class="tags"><span class="tag">Dashboard UI</span><span class="tag">REST</span></div>
+    </div>
+    <div class="card">
+      <h3>Hotel Reservation System</h3>
+      <ul>
+        <li>Browse rooms, enter details and book with a confirmation flow.</li>
+        <li>Designed for smooth UX and responsive layouts.</li>
+      </ul>
+      <div class="tags"><span class="tag">Java</span><span class="tag">PHP</span><span class="tag">MySQL</span></div>
+    </div>
+    <div class="card">
+      <h3>Digital Business Card — Graduation Project</h3>
+      <ul>
+        <li>Shareable digital profiles with QR code generation and contact sharing.</li>
+        <li>Customizable, reusable card templates.</li>
+      </ul>
+      <div class="tags"><span class="tag">Android Studio</span><span class="tag">Templates</span></div>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="edu">
+  <h2 id="edu">Education</h2>
+  <div class="item">
+    <div class="when">2021 – 2025</div>
+    <div>
+      <h3>B.Sc. Computer Engineering</h3>
+      <p class="org">Maltepe University · Istanbul, Turkey</p>
+      <ul class="points"><li>Focus on software development, mobile programming and AI. Graduation project: Digital Business Card App.</li></ul>
+    </div>
+  </div>
+  <div class="item">
+    <div class="when">2020 – 2021</div>
+    <div>
+      <h3>Software Engineering Studies</h3>
+      <p class="org">Eastern Mediterranean University · Cyprus</p>
+      <ul class="points"><li>Object-oriented programming, data structures and web development; international group projects.</li></ul>
+    </div>
+  </div>
+  <div class="item">
+    <div class="when">2019 – 2020</div>
+    <div>
+      <h3>Computer Science Studies</h3>
+      <p class="org">Al-Azhar University · Gaza, Palestine</p>
+      <ul class="points"><li>Foundations of computer science and programming; student-led coding groups.</li></ul>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="more">
+  <div class="two">
+    <div>
+      <h2 id="more">Languages</h2>
+      <div class="lang"><span>English</span><span>Fluent (C2)</span></div>
+      <div class="lang"><span>Arabic</span><span>Native</span></div>
+      <div class="lang"><span>Turkish</span><span>Intermediate (B1)</span></div>
+      <div class="lang"><span>German</span><span>Basic (A1)</span></div>
+    </div>
+    <div>
+      <h2>Certificates &amp; volunteering</h2>
+      <ul class="plain">
+        <li>Java Programming Certificate<small>Vision Plus · Sep 2023</small></li>
+        <li>Youth Group Leader (3 years)<small>YMCA Gaza · 2017 – 2019</small></li>
+        <li>Event &amp; activity volunteer<small>UNICEF</small></li>
+        <li>First-team football player<small>Represented Maltepe University</small></li>
+      </ul>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  References available on request · © 2026 Ayham Algherbawi
+</footer>
+
+</div>
+<script>
+document.getElementById('theme').addEventListener('click',function(){
+  var root=document.documentElement;
+  var cur=root.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');
+  var next=cur==='dark'?'light':'dark';
+  root.setAttribute('data-theme',next);
+  try{localStorage.setItem('theme',next)}catch(e){}
+});
+</script>
+</body>
+</html>
